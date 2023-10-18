@@ -1,4 +1,5 @@
 :root {
+  /* Colors */
   --primary-background: #ffffff;
   --dark-background: #2e2f42;
   --secondary-background: #f4f4fd;
@@ -28,8 +29,7 @@
   --active-footer-icon: #31d0aa;
 }
 
-/* ----- BASE ----- */
-
+/* ----- Reset ----- */
 h1,
 h2,
 h3,
@@ -42,10 +42,12 @@ ul {
   padding-left: 0;
 }
 
+a,
 img {
   display: block;
 }
 
+/* ----- Base----- */
 body {
   font-family: "Roboto", sans-serif;
   line-height: 24px;
@@ -126,8 +128,7 @@ body {
   overflow: hidden;
 }
 
-/* ----- HEADER ----- */
-
+/* ----- Header ----- */
 .header {
   border-bottom: 1px solid var(--primary-border);
   box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
@@ -172,7 +173,6 @@ body {
 }
 
 .nav-link {
-  display: block;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -214,8 +214,7 @@ body {
   letter-spacing: 0.02em;
 }
 
-/* ----- SECTION HERO ----- */
-
+/* ----- Section Hero----- */
 .hero-section {
   padding: 188px 0;
   background-color: var(--dark-background);
@@ -227,10 +226,11 @@ body {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .hero-section-container {
-  max-width: 1440px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -261,8 +261,7 @@ body {
   background-color: var(--active-button);
 }
 
-/* ----- SECTION FEATURES ----- */
-
+/* ----- Section Features ----- */
 .features-section {
   padding: 120px 0;
 }
@@ -290,7 +289,7 @@ body {
   margin-bottom: 8px;
 }
 
-/* ----- SECTION WORK-PROCESS ----- */
+/* ----- Section Work-Process ----- */
 .work-process-section {
   padding-bottom: 120px;
 }
@@ -315,8 +314,7 @@ body {
   padding: 120px 0;
 }
 
-/* ----- SECTION TEAM ----- */
-
+/* ----- Section Team ----- */
 .team-members-list {
   display: flex;
   gap: 24px;
@@ -340,36 +338,36 @@ body {
 }
 
 .social-links-list {
-  background-color: #31d0aa;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.social-link-item {
+  width: 40px;
+  height: 40px;
 }
 
 .social-link {
-  display: block;
-}
-
-.social-link-wrapper {
-  position: relative;
-  width: 40px;
-  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   background-color: var(--primary-icon);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   fill: #fff;
 }
 
-.social-link:hover .social-link-wrapper {
+.social-link:hover {
   background-color: var(--active-icon);
 }
 
-/* ----- SECTION CUSTOMERS ---- */
-
+/* ----- Section Customers ---- */
 .customers {
   padding: 120px 0;
 }
@@ -405,8 +403,7 @@ body {
   fill: var(--active-border);
 }
 
-/* ----- SECTION PROJECTS ----- */
-
+/* ----- Section Projects ----- */
 .projects-section {
   padding: 96px 0 120px 0;
 }
@@ -488,8 +485,7 @@ body {
   text-align: center;
 }
 
-/* ----- FOOTER ----- */
-
+/* ----- Footer ----- */
 .footer {
   background-color: var(--dark-background);
   padding: 100px 0;
@@ -519,22 +515,22 @@ body {
   max-width: 264px;
 }
 
-.footer-social-links-list {
-  display: flex;
-  gap: 16px;
-}
-
 .footer-social-links-name {
   font-weight: 500;
   margin-bottom: 16px;
 }
 
-.footer-social-link:hover .social-link-wrapper {
+.footer-social-links-list {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.footer-social-link:hover {
   background-color: var(--active-footer-icon);
 }
 
-/* ----- MODAL-WINDOW ----- */
-
+/* ----- Modal-Window ----- */
 .modal {
   position: relative;
 }
